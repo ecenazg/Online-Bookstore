@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bookstore - Sign Up</title>
+    <style>
+        * {
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        .title {
+            text-decoration: none;
+            color: inherit;
+            font-family: Baskerville Old Face;
+        }
+
+        div {
+            border: 1px solid black;
+            width: fit-content;
+            text-align: left;
+            margin-top: 10px;
+            margin-left: auto;
+            margin-right: auto;
+            padding: 2px;
+            padding-left: 20px;
+            padding-right: 20px;
+            border-radius: 5px;
+        }
+
+        h1, h5{
+            text-align: center;
+        }
+
+        #createAcc {
+            background-color: rgb(255, 175, 27);
+            width: 300px;
+            margin-top: 5px;
+            padding: 5px;
+            border-radius: 4px;
+        }
+
+        #createAcc:hover {
+            background-color: rgb(214, 151, 33);
+        }
+    </style>
+</head>
+<body>
+    <h1 style="text-align: center;"><a href="index.html" class="title">Bookstore.com</a></h1>
+    <div>
+        <h2>Create account</h2>
+        <form>
+            <label for="name">Your name</label>
+            <br/>
+            <input type="text" id="name" style="width:290px; font-size: 16px; margin-bottom: 8px;" autocomplete="off"/>
+            <br/>
+            <label for="eMail">Email</label>
+            <br/>
+            <input type="email" id="eMail" style="width:290px; font-size: 16px; margin-bottom: 8px;" autocomplete="off"/>
+            <br/>
+            <label for="pass1">Password</label>
+            <br/>
+            <input type="password" id="pass1" style="width:290px; font-size: 16px; margin-bottom: 8px;"
+            placeholder="At least 6 characters"/>
+            <p style="margin-top: -5px; font-size: small;">	
+                &#9432; Passwords must be at least 6 characters
+            </p>
+            <label for="pass2">Re-enter password</label>
+            <br/>
+            <input type="password" id="pass2" style="width:290px; font-size: 16px; margin-bottom: 8px;"/>
+            <br/>
+            <input type="submit" id="createAcc" value="Continue" onclick="alert('Sorry! There was an error creating your account! Please Try again after some time!!')"/>
+            <h6>By continuing, you agree to Bookstore.com's Conditions of <br/>Use and Privacy Notice.</h6>
+        </form>
+        <hr/>
+        <h5>Already have an account? <a href="q2_signin.html">Sign In.</a></h5>
+    </div>
+</body>
+</html>

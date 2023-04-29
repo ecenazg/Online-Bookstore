@@ -1,0 +1,100 @@
+* {
+    font-family: "Baskerville Old Face";
+}
+div {
+    height: fit-content;
+    border: 1px solid black;
+    margin: 0;
+    padding: 2px;
+}
+
+div:hover {
+    background-color: orange;
+}
+
+div:hover h2 {
+    color: white;
+}
+
+span {
+    border: 2px solid white;
+    color: white;
+    font-size: 20px;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+#searchComplex {
+    height: 70px;
+    border: 2px solid orange;
+    background-color: black;
+    font-size: 0;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+select {
+    color: black;
+    background-color: white;;
+    font-size: 18px;
+    width: 200px;
+    margin-top: auto;
+    margin-bottom: auto;
+    text-align: left;
+    border: 9px solid orange;
+    border-bottom: 11px solid orange;
+}
+
+option {
+    color: black;
+    background-color: white;
+    font-size: 18px;
+    text-align: left;
+}
+#searchBar {
+    color: black;
+    background-color: white;
+    width: 400px;
+    font-size: 18px;
+    border: 7px solid orange;
+    text-align: left;
+}
+#searchButton {
+    background-color: orange;
+    width: 30px;
+    border: 7px solid orange;
+}
+
+select:hover, span:hover {
+   cursor: pointer;
+}
+
+#searchButton:hover {
+   cursor: pointer;
+}
+
+h2 {
+   font-family: "Arial";
+    color: orange;
+    display: inline-block;
+}
+h3,h4,h5 {
+font-family: "Arial";
+   margin: 0 0 0 0; /* This is done in order to remove space from above and below the headings */
+}
+
+h4 {
+   color: gray;
+}
+.book {
+   display: inline-flex;
+   justify-content: space-between;
+   align-items: center;
+   flex-direction: column;
+   border: none;
+   margin: 7px;
+}

@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bookstore - Sign In</title>
+    <style>
+        * {
+            font-family: Arial, Helvetica, sans-serif;
+        }   
+        
+        .title {
+            text-decoration: none;
+            color: inherit;
+            font-family: Baskerville Old Face;
+        }
+
+        #signInComplex {
+            border: 1px solid black;
+            width: fit-content;
+            text-align: left;
+            margin-top: 40px;
+            margin-left: auto;
+            margin-right: auto;
+            padding: 10px;
+            padding-left: 20px;
+            padding-right: 20px;
+            border-radius: 5px;
+        }
+
+        h5{
+            text-align: center;
+        }
+
+        #logIn {
+            background-color: rgb(255, 175, 27);
+            width: 300px;
+            margin-top: 5px;
+            padding: 5px;
+            border-radius: 4px;
+        }
+
+        #logIn:hover {
+            background-color: rgb(214, 151, 33);
+        }
+
+        #newAccount {
+            display: inline-block;
+            text-align: center;
+            margin-left: 42%;
+            width: 15%;
+            border: 1px solid black;
+            padding: 6px;
+            border-radius: 4px;
+            background-color: silver;
+        }
+
+        #newAccount a{
+            text-decoration: none;
+            color: black;
+        }
+
+        #newAccount:hover {
+            background-color: gray;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <h1 style="text-align: center;"><a href="index.html" class="title">Bookstore.com</a></h1>
+    <div id="signInComplex">
+        <h2>Login</h2>
+        <form>
+            <label for="emailPhone">Email or phone number</label>
+            <br/>
+            <input type="text" id="emailPhone" autocomplete="off" style="width:290px; font-size: 16px; margin-bottom: 5px;"/>
+            <br/>
+            <label for="pass">Password</label>
+            <br/>
+            <input type="password" id="pass" style="width:290px; font-size: 16px; margin-bottom: 5px;"/>
+            <br/>
+            <input type="submit" id="logIn" value="Continue" 
+            onclick="alert('Sorry! There was an error logging you in! Please Try again after some time!')"/>
+            <h6>By continuing, you agree to Bookstore.com's Conditions of <br/>Use and Privacy Notice.</h6>
+        </form>
+    </div>
+    <h5>New to Bookstore.com?</h5>
+    <span id="newAccount"><a href="q2_newAccount.html">Create your Bookstore account</a></span>
+</body>
+</html>
