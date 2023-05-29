@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wishlist - Bookstore</title>
+    <style>
+        /* CSS styles */
+        h1 {
+            text-align: center;
+        }
+
+        #wishlist {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        .wishlist-item {
+            width: 200px;
+            margin: 10px;
+            padding: 10px;
+            border: 1px solid #ccc;
+            text-align: center;
+        }
+
+        .wishlist-item img {
+            width: 160px;
+            height: 200px;
+        }
+
+        .wishlist-item h3,
+        .wishlist-item h4 {
+            margin: 5px 0;
+        }
+
+        .wishlist-item button {
+            margin-top: 10px;
+        }
+
+        .wishlistButton {
+            background-color: #4CAF50;
+            border: none;
+            color: white;
+            padding: 10px 20px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            margin: 4px 2px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <h1>My Wishlist</h1>
+    <div id="wishlist">
+        <!-- Wishlist items will be dynamically added here -->
+    </div>
+
+    <script>
+        // Wishlist data
+        var wishlistItems = [];
+
+        // Function to create a wishlist item HTML
+        function createWishlistItem(item) {
+            var itemContainer = document.createElement("div");
+            itemContainer.className = "wishlist-item";
+
+            var imageElement = document.createElement("img");
+            imageElement.src = item.imageUrl;
+            imageElement.alt = item.title;
+            itemContainer.appendChild(imageElement);
+
+            var titleElement = document.createElement("h3");
+            titleElement.textContent = item.title;
+            itemContainer.appendChild(titleElement);
+
+            var authorElement = document.createElement("h4");
+            authorElement.textContent = item.author;
+            itemContainer.appendChild(authorElement);
+
+            var priceElement = document.createElement("h3");
+            priceElement.innerHTML = "&#8377; " + item.price;
+            itemContainer.appendChild(priceElement);
+
+            var removeButton = document.createElement("button");
+            removeButton.className = "removeButton";
+            removeButton.textContent = "Remove";
+            removeButton.addEventListener("click", function() {
+                var bookContainer = this.parentNode;
+                bookContainer.parentNode.removeChild(bookContainer);
+                removeFromWishlist(item.id);
+            });
+            itemContainer.appendChild(removeButton);
+
+            return itemContainer;
+        }
+
+        function addToWishlist(bookId) {
+            var bookData = retrieveBookData(bookId);
+            wishlistItems.push(bookData);
+            localStorage.setItem('wishlist', JSON.stringify(wishlistItems));
+            alert('Book added to wishlist!');
+            window.location.href = 'wishlist.html'; // Redirect to wishlist page
+        }
+
+        function removeFromWishlist(bookId) {
+            wishlistItems = wishlistItems.filter(function(item) {
+                return item.id !== bookId;
+            });
+            localStorage.setItem('wishlist', JSON.stringify(wishlistItems));
+        }
+
+        function retrieveBookData(bookId) {
+            // Simulated function to retrieve book data based on bookId
+            // Replace this with your actual implementation to fetch the book details
+            var bookData = {
+                id: bookId,
+                title: "Book Title",
+                author: "Book Author",
+                price: "0.00",
+                imageUrl: "https://example.com/book-image.jpg"
+            };
+            return bookData;
+        }
+
+        // Retrieve wishlist items from local storage
+        var storedWishlistItems = JSON.parse(localStorage.getItem('wishlist')) || [];
+
+        // Update wishlistItems array with stored data
+        wishlistItems = storedWishlistItems;
+
+        // Render wishlist items
+        var wishlistContainer = document.getElementById("wishlist");
+        wishlistItems.forEach(function(item) {
+            var wishlistItem = createWishlistItem(item);
+            wishlistContainer.appendChild(wishlistItem);
+        });
+    </script>
+</body>
+</html>
