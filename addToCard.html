@@ -1,0 +1,377 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Online Book Shopping</title>
+  <style>
+    .book {
+      display: inline-block;
+      margin: 10px;
+      padding: 10px;
+      border: 1px solid #ccc;
+    }
+  </style>
+</head>
+<body>
+  <h1>Online Book Shopping</h1>
+
+  <div class="book" id="book1">
+    <h2>Born To Ice</h2>
+    <p>Paul Nicklen</p>
+    <p>Price: $811.19</p>
+    <button onclick="addToCart('book1')">Add to Cart</button>
+  </div>
+
+  <div class="book" id="book2">
+    <h2>Contact High: A Visual  History of Hip-Hop</h2>
+    <p>Author: Vikki Tobak & Questlove</p>
+    <p>Price: $282.69</p>
+    <button onclick="addToCart('book2')">Add to Cart</button>
+  </div>
+
+  <div class="book" id="book3">
+    <h2>Bibliophile: An Illustrated Miscellany</h2>
+    <p>Author: Jane Mount</p>
+    <p>Price: $164.99</p>
+    <button onclick="addToCart('book3')">Add to Cart</button>
+  </div>
+
+  <div class="book" id="book4">
+    <h2>Animal Kingdom: A Collection of Portraits</h2>
+    <p>Author: Randal Ford & Dan Winters</p>
+    <p>Price: $225.69</p>
+    <button onclick="addToCart('book4')">Add to Cart</button>
+  </div>
+
+  <div class="book" id="book5">
+    <h2>Mark Seliger Photographs</h2>
+    <p>Author: Mark Seliger</p>
+    <p>Price: $410.00</p>
+    <button onclick="addToCart('book5')">Add to Cart</button>
+  </div>
+
+  <div class="book" id="book6">
+    <h2>Brand by Hand: Blisters, Calluses, and Clients</h2>
+    <p>Author: Jon Contino</p>
+    <p>Price: $400.99</p>
+    <button onclick="addToCart('book6')">Add to Cart</button>
+  </div>
+
+  <div class="book" id="book7">
+    <h2>They Called Us Enemy</h2>
+    <p>Author: George Takei & Justin Eisinger</p>
+    <p>Price: $170.49</p>
+    <button onclick="addToCart('book7')">Add to Cart</button>
+  </div>
+
+  <div class="book" id="book8">
+    <h2>In the Dream House: A Memoir</h2>
+    <p>Author: Carmen Machado</p>
+    <p>Price: $199.99</p>
+    <button onclick="addToCart('book8')">Add to Cart</button>
+  </div>
+
+  <div class="book" id="book9">
+    <h2>Save Me the Plums: Gourmet Memoir</h2>
+    <p>Author: Ruth Reichel</p>
+    <p>Price: $410.69</p>
+    <button onclick="addToCart('book9')">Add to Cart</button>
+  </div>
+
+  <div class="book" id="book10">
+    <h2>Wild Game: My Mother, Her Lover, and Me</h2>
+    <p>Author: Adrienne Brodeur</p>
+    <p>Price: $155.69</p>
+    <button onclick="addToCart('book10')">Add to Cart</button>
+  </div>
+
+  <div class="book" id="book11">
+    <h2>Life Undercover: Coming of Age in the CIA</h2>
+    <p>Author: Amaryllis Fox</p>
+    <p>Price: $219.00</p>
+    <button onclick="addToCart('book11')">Add to Cart</button>
+  </div>
+
+  <div class="book" id="book12">
+    <h2>The Apology</h2>
+    <p>Author: Eve Ensler</p>
+    <p>Price: $129.99</p>
+    <button onclick="addToCart('book12')">Add to Cart</button>
+  </div>
+
+  <div class="book" id="book13">
+    <h2>The Deep End (Diary of a Wimpy Kid Book 15)</h2>
+    <p>Author: Jeff Kinney</p>
+    <p>Price: $150.00</p>
+    <button onclick="addToCart('book13')">Add to Cart</button>
+  </div>
+
+  <div class="book" id="book14">
+    <h2>Room on the Broom</h2>
+    <p>Author: Julia Donaldson</p>
+    <p>Price: $80.59</p>
+    <button onclick="addToCart('book14')">Add to Cart</button>
+  </div>
+
+  <div class="book" id="book15">
+    <h2>If Animals Kissed Good Night</h2>
+    <p>Author: Ann Whitford Paul</p>
+    <p>Price: $40.99</p>
+    <button onclick="addToCart('book15')">Add to Cart</button>
+  </div>
+
+  <div class="book" id="book16">
+    <h2>Coraline</h2>
+    <p>Author: Neil Gaiman</p>
+    <p>Price: $175.99</p>
+    <button onclick="addToCart('book16')">Add to Cart</button>
+  </div>
+
+  <div class="book" id="book17">
+    <h2>The Very Hungry Caterpillar</h2>
+    <p>Author: Eric Carle</p>
+    <p>Price: $30.59</p>
+    <button onclick="addToCart('book17')">Add to Cart</button>
+  </div>
+
+  <div class="book" id="book18">
+    <h2>The Giving Tree</h2>
+    <p>Author: Shel Silverstein</p>
+    <p>Price: $17.59</p>
+    <button onclick="addToCart('book18')">Add to Cart</button>
+  </div>
+
+  <div class="book" id="book19">
+    <h2>Jacques Pépin Quick & Simple</h2>
+    <p>Author: Jacques Pépin</p>
+    <p>Price: $210.00</p>
+    <button onclick="addToCart('book19')">Add to Cart</button>
+  </div>
+
+  <div class="book" id="book20">
+    <h2>Food Babe Kitchen</h2>
+    <p>Author: Vani Hari</p>
+    <p>Price: $207.99</p>
+    <button onclick="addToCart('book20')">Add to Cart</button>
+  </div>
+
+  <div class="book" id="book21">
+    <h2>From Crook to Cook</h2>
+    <p>Author: Snoop Dogg</p>
+    <p>Price: $149.99</p>
+    <button onclick="addToCart('book21')">Add to Cart</button>
+  </div>
+
+  <div class="book" id="book22">
+    <h2>Ottolenghi Flavor: A Cookbook</h2>
+    <p>Author: Yotam Ottolenghi</p>
+    <p>Price: $209.99</p>
+    <button onclick="addToCart('book22')">Add to Cart</button>
+  </div>
+
+  <div class="book" id="book23">
+    <h2>The Complete Anti-Inflammatory Diet for Beginners</h2>
+    <p>Author: Dorothy Calimeris</p>
+    <p>Price: $81.59</p>
+    <button onclick="addToCart('book23')">Add to Cart</button>
+  </div>
+
+  <div class="book" id="book24">
+    <h2>Sunday Dinner at Grandma's</h2>
+    <p>Author: Gooseberry Patch</p>
+    <p>Price: $200.00</p>
+    <button onclick="addToCart('book24')">Add to Cart</button>
+  </div>
+
+  <div class="book" id="book25">
+    <h2>A Time for Mercy</h2>
+    <p>Author: John Grisham</p>
+    <p>Price: $149.99</p>
+    <button onclick="addToCart('book25')">Add to Cart</button>
+  </div>
+
+  <div class="book" id="book26">
+    <h2>The Haunting of Brynn</h2>
+    <p>Author: Wilder: A Novel</p>
+    <p>Price: $75.59</p>
+    <button onclick="addToCart('book26')">Add to Cart</button>
+  </div>
+
+  <div class="book" id="book27">
+    <h2>Ready Player Two</h2>
+    <p>Author: Ernest Cline</p>
+    <p>Price: $210.29</p>
+    <button onclick="addToCart('book27')">Add to Cart</button>
+  </div>
+
+  <div class="book" id="book28">
+    <h2>Where the Forest Meets the Stars</h2>
+    <p>Author: Glendy Vanderah</p>
+    <p>Price: $149.99</p>
+    <button onclick="addToCart('book28')">Add to Cart</button>
+  </div>
+
+  <div class="book" id="book29">
+    <h2>The Evening and the Morning</h2>
+    <p>Author: Ken Follett</p>
+    <p>Price: $159.99</p>
+    <button onclick="addToCart('book29')">Add to Cart</button>
+  </div>
+
+  <div class="book" id="book30">
+    <h2>The Silent Daughter</h2>
+    <p>Author: Claire Amarti</p>
+    <p>Price: $249.99</p>
+    <button onclick="addToCart('book30')">Add to Cart</button>
+  </div>
+
+  <div class="book" id="book31">
+    <h2>Happily Letter After</h2>
+    <p>Author: Vi Keeland</p>
+    <p>Price: $59.99</p>
+    <button onclick="addToCart('book31')">Add to Cart</button>
+  </div>
+
+  <div class="book" id="book32">
+    <h2>Spellbreaker</h2>
+    <p>Author: Charlie N. Holmberg</p>
+    <p>Price: $49.99</p>
+    <button onclick="addToCart('book32')">Add to Cart</button>
+  </div>
+
+  <div class="book" id="book33">
+    <h2>The Last Correspondent</h2>
+    <p>Author: Soraya M. Lane</p>
+    <p>Price: $229.00</p>
+    <button onclick="addToCart('book33')">Add to Cart</button>
+  </div>
+
+  <div class="book" id="book34">
+    <h2>The Lost Girls of Devon</h2>
+    <p>Author: Barbara O'Neal</p>
+    <p>Price: $70.00</p>
+    <button onclick="addToCart('book34')">Add to Cart</button>
+  </div>
+
+  <div class="book" id="book35">
+    <h2>When We Believed in Mermaids</h2>
+    <p>Author: Barbara O'Neal</p>
+    <p>Price: $225.00</p>
+    <button onclick="addToCart('book35')">Add to Cart</button>
+  </div>
+
+  <div class="book" id="book36">
+    <h2>Regretting You</h2>
+    <p>Author: Colleen Hoover</p>
+    <p>Price: $200.99</p>
+    <button onclick="addToCart('book36')">Add to Cart</button>
+  </div>
+
+  <div class="book" id="book37">
+    <h2>Dune</h2>
+    <p>Author: Frank Herbert</p>
+    <p>Price: $59.99</p>
+    <button onclick="addToCart('book37')">Add to Cart</button>
+  </div>
+
+  <div class="book" id="book38">
+    <h2>Harry Potter and the Sorcerer's Stone</h2>
+    <p>Author: J.K. Rowling</p>
+    <p>Price: $89.99</p>
+    <button onclick="addToCart('book38')">Add to Cart</button>
+  </div>
+
+  <div class="book" id="book39">
+    <h2>1984</h2>
+    <p>Author: George Orwell</p>
+    <p>Price: $200.59</p>
+    <button onclick="addToCart('book39')">Add to Cart</button>
+  </div>
+
+  <div class="book" id="book40">
+    <h2>The Invisible Life of Addie LaRue</h2>
+    <p>Author: V. E. Schwab</p>
+    <p>Price: $160.99</p>
+    <button onclick="addToCart('book40')">Add to Cart</button>
+  </div>
+
+  <div class="book" id="book41">
+    <h2>Lovecraft Country</h2>
+    <p>Author: Matt Ruff</p>
+    <p>Price: $300.00</p>
+    <button onclick="addToCart('book41')">Add to Cart</button>
+  </div>
+
+  <div class="book" id="book42">
+    <h2>The Stand</h2>
+    <p>Author: Stephen King</p>
+    <p>Price: $349.99</p>
+    <button onclick="addToCart('book42')">Add to Cart</button>
+  </div>
+
+  <div class="book" id="book43">
+    <h2>Midnight Sun</h2>
+    <p>Author: Stephenie Meyer</p>
+    <p>Price: $220.99</p>
+    <button onclick="addToCart('book43')">Add to Cart</button>
+  </div>
+
+  <div class="book" id="book44">
+    <h2>To Kill a Mockingbird</h2>
+    <p>Author: Harper Lee</p>
+    <p>Price: $149.00</p>
+    <button onclick="addToCart('book44')">Add to Cart</button>
+  </div>
+
+  <div class="book" id="book45">
+    <h2>The Tales of Beedle The Bard</h2>
+    <p>Author: J.K. Rowling</p>
+    <p>Price: $150.49</p>
+    <button onclick="addToCart('book45')">Add to Cart</button>
+  </div>
+
+  <div class="book" id="book46">
+    <h2>The Hobbit</h2>
+    <p>Author: J.R.R. Tolkien</p>
+    <p>Price: $200.99</p>
+    <button onclick="addToCart('book46')">Add to Cart</button>
+  </div>
+
+  <div class="book" id="book47">
+    <h2>The Trials of Apollo: The Tower Of Nero</h2>
+    <p>Author: Rick Riordan</p>
+    <p>Price: $459.99</p>
+    <button onclick="addToCart('book47')">Add to Cart</button>
+  </div>
+  
+  <div class="book" id="book48">
+    <h2>Eragon: Book I</h2>
+    <p>Author: Christopher Paolini</p>
+    <p>Price: $100.00</p>
+    <button onclick="addToCart('book48')">Add to Cart</button>
+  </div>
+
+
+  <script>
+    // JavaScript function to add a book to the cart
+    function addToCart(bookId) {
+      // Get the book element using the bookId
+      var book = document.getElementById(bookId);
+
+      // Get the book details
+      var title = book.querySelector("h2").textContent;
+      var author = book.querySelector("p:nth-child(2)").textContent;
+      var price = book.querySelector("p:nth-child(3)").textContent;
+
+      // Create a cart item object
+      var cartItem = {
+        title: title,
+        author: author,
+        price: price
+      };
+
+      // Add the cart item to the cart (you can replace this with your own cart logic)
+      console.log("Added to cart:", cartItem);
+    }
+  </script>
+</body>
+</html>
