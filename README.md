@@ -18,13 +18,6 @@ Online Bookstore is a web application that allows users to browse and purchase b
 ## Technologies Used
 
 - HTML, CSS, JavaScript: Front-end development
-- Node.js: Server-side JavaScript runtime
-- Express.js: Web application framework for Node.js
-- MongoDB: NoSQL database for storing book and user information
-- Mongoose: MongoDB object modeling for Node.js
-- Stripe: Payment processing integration
-- Passport.js: User authentication and authorization middleware
-- Handlebars: Template engine for server-side rendering
-- Heroku: Deployment platform
+
 
 
