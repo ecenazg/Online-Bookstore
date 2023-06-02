@@ -62,8 +62,33 @@
         // Wishlist data
         var wishlistItems = [];
 
+        // Function to create a wishlist item object
+        function createWishlistItem(id, imageUrl, title, author, price) {
+            var item = {
+                id: id,
+                imageUrl: imageUrl,
+                title: title,
+                author: author,
+                price: price
+            };
+            return item;
+        }
+
+        // Add the books to the wishlist
+        var wishlistBooks = [
+            createWishlistItem("AP1", "https://images-na.ssl-images-amazon.com/images/I/517j00U23SL._SX415_BO1,204,203,200_.jpg", "Born To Ice", "by Paul Nicklen", "₹ 811.19"),
+            createWishlistItem("AP2", "https://images-na.ssl-images-amazon.com/images/I/91-8mABL4rL.jpg", "Contact High: A Visual History of Hip-Hop", "by Vikki Tobak & Questlove", "₹ 282.69"),
+            createWishlistItem("AP3", "https://images-na.ssl-images-amazon.com/images/I/91D0j9uwOBL.jpg", "Bibliophile: An Illustrated Miscellany", "by Jane Mount", "₹ 164.99")
+        ];
+
+        // Retrieve wishlist items from local storage
+        var storedWishlistItems = JSON.parse(localStorage.getItem('wishlist')) || [];
+
+        // Update wishlistItems array with stored data
+        wishlistItems = storedWishlistItems.concat(wishlistBooks);
+
         // Function to create a wishlist item HTML
-        function createWishlistItem(item) {
+        function createWishlistItemElement(item) {
             var itemContainer = document.createElement("div");
             itemContainer.className = "wishlist-item";
 
@@ -80,63 +105,45 @@
             authorElement.textContent = item.author;
             itemContainer.appendChild(authorElement);
 
-            var priceElement = document.createElement("h3");
-            priceElement.innerHTML = "&#8377; " + item.price;
+            var priceElement = document.createElement("p");
+            priceElement.style.color = "red";
+            priceElement.textContent = item.price;
             itemContainer.appendChild(priceElement);
 
             var removeButton = document.createElement("button");
-            removeButton.className = "removeButton";
             removeButton.textContent = "Remove";
             removeButton.addEventListener("click", function() {
-                var bookContainer = this.parentNode;
-                bookContainer.parentNode.removeChild(bookContainer);
-                removeFromWishlist(item.id);
+                removeItemFromWishlist(item.id);
             });
             itemContainer.appendChild(removeButton);
 
             return itemContainer;
         }
 
-        function addToWishlist(bookId) {
-            var bookData = retrieveBookData(bookId);
-            wishlistItems.push(bookData);
-            localStorage.setItem('wishlist', JSON.stringify(wishlistItems));
-            alert('Book added to wishlist!');
-            window.location.href = 'wishlist.html'; // Redirect to wishlist page
+        // Function to render wishlist items
+        function renderWishlistItems() {
+            var wishlistContainer = document.getElementById("wishlist");
+            wishlistContainer.innerHTML = "";
+
+            for (var i = 0; i < wishlistItems.length; i++) {
+                var wishlistItem = wishlistItems[i];
+                var wishlistItemElement = createWishlistItemElement(wishlistItem);
+                wishlistContainer.appendChild(wishlistItemElement);
+            }
         }
 
-        function removeFromWishlist(bookId) {
+        // Function to remove an item from the wishlist
+        function removeItemFromWishlist(itemId) {
             wishlistItems = wishlistItems.filter(function(item) {
-                return item.id !== bookId;
+                return item.id !== itemId;
             });
+
             localStorage.setItem('wishlist', JSON.stringify(wishlistItems));
+            renderWishlistItems();
         }
 
-        function retrieveBookData(bookId) {
-            // Simulated function to retrieve book data based on bookId
-            // Replace this with your actual implementation to fetch the book details
-            var bookData = {
-                id: bookId,
-                title: "Book Title",
-                author: "Book Author",
-                price: "0.00",
-                imageUrl: "https://example.com/book-image.jpg"
-            };
-            return bookData;
-        }
-
-        // Retrieve wishlist items from local storage
-        var storedWishlistItems = JSON.parse(localStorage.getItem('wishlist')) || [];
-
-        // Update wishlistItems array with stored data
-        wishlistItems = storedWishlistItems;
-
-        // Render wishlist items
-        var wishlistContainer = document.getElementById("wishlist");
-        wishlistItems.forEach(function(item) {
-            var wishlistItem = createWishlistItem(item);
-            wishlistContainer.appendChild(wishlistItem);
-        });
+        // Render the wishlist items on page load
+        renderWishlistItems();
     </script>
 </body>
 </html>
