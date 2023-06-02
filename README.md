@@ -1,3 +1,30 @@
-# bookstore
-Static website for an online bookstore that is modelled after Amazon.com. It consists of a Home page, Registration and User Login pages, Books catalogue, Shopping cart and Payment &amp; Order confirmation page.
+# Online Bookstore
+
+Online Bookstore is a web application that allows users to browse and purchase books online. It provides a wide range of books across different genres and provides features such as searching for books, adding them to a shopping cart, and completing the purchase.
+
+## Features
+
+- Browse books by genre or search for specific titles or authors
+- View book details including cover image, title, author, and price
+- Add books to the shopping cart
+- Update the quantity of books in the shopping cart
+- Remove books from the shopping cart
+- Complete the purchase by providing shipping and payment information
+- Create an account and manage user profile
+- View order history and track the status of orders
+- Add books to the wishlist for future reference
+- Responsive design for optimal viewing on different devices
+
+## Technologies Used
+
+- HTML, CSS, JavaScript: Front-end development
+- Node.js: Server-side JavaScript runtime
+- Express.js: Web application framework for Node.js
+- MongoDB: NoSQL database for storing book and user information
+- Mongoose: MongoDB object modeling for Node.js
+- Stripe: Payment processing integration
+- Passport.js: User authentication and authorization middleware
+- Handlebars: Template engine for server-side rendering
+- Heroku: Deployment platform
+
 
