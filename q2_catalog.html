@@ -10,66 +10,65 @@
             border: 1px solid black;
         }
 
-       h2 {
-           font-family: "Arial";
-           margin: 0 0 0 0;
-       }
+        h2 {
+            font-family: "Arial";
+            margin: 0 0 0 0;
+        }
 
-       h5 {
-           font-family: "Arial";
-           color: black;
-           margin: 0 0 0 0;
-           padding: 0 0 0 0;
+        h5 {
+            font-family: "Arial";
+            color: black;
+            margin: 0 0 0 0;
+            padding: 0 0 0 0;
+        }
 
-       }
-
-       .bookInfo {
-           display: inline-flex;
-           justify-content: space-between;
-           align-items: center;
-           width: 99%;
-           padding: 5px;
-           padding-top: 10px;
-           padding-bottom: 10px;
-       }
-       .bookDet {
-           width: 60%;
-           padding: 10px;
-           color: black;
-           font-family: Arial, Helvetica, sans-serif;
-       }
-       select {
-           font-size: 16px;
-           margin: 5px;
-       }
-       .shopButton {
-           display: inline-block;
-           text-align: center;
-           font-size: 16px;
-           color: black;
+        .bookInfo {
+            display: inline-flex;
+            justify-content: space-between;
+            align-items: center;
+            width: 99%;
+            padding: 5px;
+            padding-top: 10px;
+            padding-bottom: 10px;
+        }
+        .bookDet {
+            width: 60%;
+            padding: 10px;
+            color: black;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        select {
+            font-size: 16px;
+            margin: 5px;
+            width: 50%;
+        }
+        .shopButton, .wishlistButton {
+            display: inline-block;
+            text-align: center;
+            font-size: 16px;
+            color: black;
             background-color: rgb(255, 175, 27);
-            width: 80%;          
+            width: 80%;
             margin-top: 5px;
             padding: 5px;
             border-radius: 4px;
             border: 1px solid black;
         }
-        .shopButton:hover {
+        .shopButton:hover, .wishlistButton:hover {
             background-color: rgb(214, 151, 33);
             cursor: pointer;
         }
+        span[style="padding: 10px;"] {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 10px;
+        }
+        span .shopButton {
+            grid-column: span 2;
+        }
         .wishlistButton {
-        background-color: #4CAF50;
-        border: none;
-        color: white;
-        padding: 10px 20px;
-        text-align: center;
-        text-decoration: none;
-        display: inline-block;
-        font-size: 16px;
-        margin: 4px 2px;
-        cursor: pointer;
-    }
+            width: 90%;
+        }
     </style>
 </head>
 
@@ -88,7 +87,7 @@
         <span style="padding: 10px;">
             <p style="color: red;">₹ 811.19</p>
             <p style="color: green;">In Stock.</p>
-            <select>
+            <select >
                 <option value="def" disabled selected>Qty</option>
                 <option value="1">1</option>
                 <option value="2">2</option>
@@ -96,14 +95,14 @@
                 <option value="4">4</option>
                 <option value="5">5</option>
             </select>
-            <a href="q2_cart.html">
+            <a href="q2_cart.html" style="" "">
                 <span class="shopButton">
                     Add To Cart
                 </span>
                 </a>
                 <a href="q2_checkout.html">
                 <span class="shopButton">
-                    Buy Now
+                    View Details
                 </span>
                 </a>
             <a href="wishlist.html">
@@ -142,7 +141,7 @@
                 </a>
                 <a href="q2_checkout.html">
                 <span class="shopButton">
-                    Buy Now
+                    View Details
                 </span>
                 </a>
             <a href="wishlist.html">
@@ -181,7 +180,7 @@
                 </a>
                 <a href="q2_checkout.html">
                 <span class="shopButton">
-                    Buy Now
+                    View Details
                 </span>
                 </a>
             <a href="wishlist.html">
@@ -220,7 +219,7 @@
                 </a>
                 <a href="q2_checkout.html">
                 <span class="shopButton">
-                    Buy Now
+                    View Details
                 </span>
                 </a>
             <a href="wishlist.html">
@@ -230,7 +229,6 @@
                 
             </a>
 
-        
     </div>
 
     <div id="AP5" class="bookInfo">
@@ -262,7 +260,7 @@
                 </a>
                 <a href="q2_checkout.html">
                 <span class="shopButton">
-                    Buy Now
+                    View Details
                 </span>
                 </a>
             <a href="wishlist.html">
@@ -303,7 +301,7 @@
                 </a>
                 <a href="q2_checkout.html">
                 <span class="shopButton">
-                    Buy Now
+                    View Details
                 </span>
                 </a>
             <a href="wishlist.html">
@@ -345,7 +343,7 @@
                 </a>
                 <a href="q2_checkout.html">
                 <span class="shopButton">
-                    Buy Now
+                    View Details
                 </span>
                 </a>
             <a href="wishlist.html">
@@ -386,7 +384,7 @@
                 </a>
                 <a href="q2_checkout.html">
                 <span class="shopButton">
-                    Buy Now
+                    View Details
                 </span>
                 </a>
             <a href="wishlist.html">
@@ -427,7 +425,7 @@
                 </a>
                 <a href="q2_checkout.html">
                 <span class="shopButton">
-                    Buy Now
+                    View Details
                 </span>
                 </a>
             <a href="wishlist.html">
@@ -468,7 +466,7 @@
                 </a>
                 <a href="q2_checkout.html">
                 <span class="shopButton">
-                    Buy Now
+                    View Details
                 </span>
                 </a>
             <a href="wishlist.html">
@@ -509,7 +507,7 @@
                 </a>
                 <a href="q2_checkout.html">
                 <span class="shopButton">
-                    Buy Now
+                    View Details
                 </span>
                 </a>
             <a href="wishlist.html">
@@ -550,7 +548,7 @@
                 </a>
                 <a href="q2_checkout.html">
                 <span class="shopButton">
-                    Buy Now
+                    View Details
                 </span>
                 </a>
             <a href="wishlist.html">
@@ -593,7 +591,7 @@
                 </a>
                 <a href="q2_checkout.html">
                 <span class="shopButton">
-                    Buy Now
+                    View Details
                 </span>
                 </a>
             <a href="wishlist.html">
@@ -634,7 +632,7 @@
                 </a>
                 <a href="q2_checkout.html">
                 <span class="shopButton">
-                    Buy Now
+                    View Details
                 </span>
                 </a>
             <a href="wishlist.html">
@@ -675,7 +673,7 @@
                 </a>
                 <a href="q2_checkout.html">
                 <span class="shopButton">
-                    Buy Now
+                    View Details
                 </span>
                 </a>
             <a href="wishlist.html">
@@ -716,7 +714,7 @@
                 </a>
                 <a href="q2_checkout.html">
                 <span class="shopButton">
-                    Buy Now
+                    View Details
                 </span>
                 </a>
             <a href="wishlist.html">
@@ -757,7 +755,7 @@
                 </a>
                 <a href="q2_checkout.html">
                 <span class="shopButton">
-                    Buy Now
+                    View Details
                 </span>
                 </a>
             <a href="wishlist.html">
@@ -799,7 +797,7 @@
                 </a>
                 <a href="q2_checkout.html">
                 <span class="shopButton">
-                    Buy Now
+                    View Details
                 </span>
                 </a>
             <a href="wishlist.html">
@@ -841,7 +839,7 @@
                 </a>
                 <a href="q2_checkout.html">
                 <span class="shopButton">
-                    Buy Now
+                    View Details
                 </span>
                 </a>
             <a href="wishlist.html">
@@ -882,7 +880,7 @@
                 </a>
                 <a href="q2_checkout.html">
                 <span class="shopButton">
-                    Buy Now
+                    View Details
                 </span>
                 </a>
             <a href="wishlist.html">
@@ -924,7 +922,7 @@
                 </a>
                 <a href="q2_checkout.html">
                 <span class="shopButton">
-                    Buy Now
+                    View Details
                 </span>
                 </a>
             <a href="wishlist.html">
@@ -965,7 +963,7 @@
                 </a>
                 <a href="q2_checkout.html">
                 <span class="shopButton">
-                    Buy Now
+                    View Details
                 </span>
                 </a>
             <a href="wishlist.html">
@@ -1006,7 +1004,7 @@
                 </a>
                 <a href="q2_checkout.html">
                 <span class="shopButton">
-                    Buy Now
+                    View Details
                 </span>
                 </a>
             <a href="wishlist.html">
@@ -1048,7 +1046,7 @@
                 </a>
                 <a href="q2_checkout.html">
                 <span class="shopButton">
-                    Buy Now
+                    View Details
                 </span>
                 </a>
             <a href="wishlist.html">
@@ -1091,7 +1089,7 @@
                 </a>
                 <a href="q2_checkout.html">
                 <span class="shopButton">
-                    Buy Now
+                    View Details
                 </span>
                 </a>
             <a href="wishlist.html">
@@ -1132,7 +1130,7 @@
                 </a>
                 <a href="q2_checkout.html">
                 <span class="shopButton">
-                    Buy Now
+                    View Details
                 </span>
                 </a>
             <a href="wishlist.html">
@@ -1174,7 +1172,7 @@
                 </a>
                 <a href="q2_checkout.html">
                 <span class="shopButton">
-                    Buy Now
+                    View Details
                 </span>
                 </a>
             <a href="wishlist.html">
@@ -1215,7 +1213,7 @@
                 </a>
                 <a href="q2_checkout.html">
                 <span class="shopButton">
-                    Buy Now
+                    View Details
                 </span>
                 </a>
             <a href="wishlist.html">
@@ -1256,7 +1254,7 @@
                 </a>
                 <a href="q2_checkout.html">
                 <span class="shopButton">
-                    Buy Now
+                    View Details
                 </span>
                 </a>
             <a href="wishlist.html">
@@ -1297,7 +1295,7 @@
                 </a>
                 <a href="q2_checkout.html">
                 <span class="shopButton">
-                    Buy Now
+                    View Details
                 </span>
                 </a>
             <a href="wishlist.html">
@@ -1339,7 +1337,7 @@
                 </a>
                 <a href="q2_checkout.html">
                 <span class="shopButton">
-                    Buy Now
+                    View Details
                 </span>
                 </a>
             <a href="wishlist.html">
@@ -1381,7 +1379,7 @@
                 </a>
                 <a href="q2_checkout.html">
                 <span class="shopButton">
-                    Buy Now
+                    View Details
                 </span>
                 </a>
             <a href="wishlist.html">
@@ -1422,7 +1420,7 @@
                 </a>
                 <a href="q2_checkout.html">
                 <span class="shopButton">
-                    Buy Now
+                    View Details
                 </span>
                 </a>
             <a href="wishlist.html">
@@ -1463,7 +1461,7 @@
                 </a>
                 <a href="q2_checkout.html">
                 <span class="shopButton">
-                    Buy Now
+                    View Details
                 </span>
                 </a>
             <a href="wishlist.html">
@@ -1504,7 +1502,7 @@
                 </a>
                 <a href="q2_checkout.html">
                 <span class="shopButton">
-                    Buy Now
+                    View Details
                 </span>
                 </a>
             <a href="wishlist.html">
@@ -1545,7 +1543,7 @@
                 </a>
                 <a href="q2_checkout.html">
                 <span class="shopButton">
-                    Buy Now
+                    View Details
                 </span>
                 </a>
             <a href="wishlist.html">
@@ -1587,7 +1585,7 @@
                 </a>
                 <a href="q2_checkout.html">
                 <span class="shopButton">
-                    Buy Now
+                    View Details
                 </span>
                 </a>
             <a href="wishlist.html">
@@ -1629,7 +1627,7 @@
                 </a>
                 <a href="q2_checkout.html">
                 <span class="shopButton">
-                    Buy Now
+                    View Details
                 </span>
                 </a>
             <a href="wishlist.html">
@@ -1671,7 +1669,7 @@
                 </a>
                 <a href="q2_checkout.html">
                 <span class="shopButton">
-                    Buy Now
+                    View Details
                 </span>
                 </a>
             <a href="wishlist.html">
@@ -1712,7 +1710,7 @@
                 </a>
                 <a href="q2_checkout.html">
                 <span class="shopButton">
-                    Buy Now
+                    View Details
                 </span>
                 </a>
             <a href="wishlist.html">
@@ -1755,7 +1753,7 @@
                 </a>
                 <a href="q2_checkout.html">
                 <span class="shopButton">
-                    Buy Now
+                    View Details
                 </span>
                 </a>
             <a href="wishlist.html">
@@ -1797,7 +1795,7 @@
                 </a>
                 <a href="q2_checkout.html">
                 <span class="shopButton">
-                    Buy Now
+                    View Details
                 </span>
                 </a>
             <a href="wishlist.html">
@@ -1840,7 +1838,7 @@
                 </a>
                 <a href="q2_checkout.html">
                 <span class="shopButton">
-                    Buy Now
+                    View Details
                 </span>
                 </a>
             <a href="wishlist.html">
@@ -1881,7 +1879,7 @@
                 </a>
                 <a href="q2_checkout.html">
                 <span class="shopButton">
-                    Buy Now
+                    View Details
                 </span>
                 </a>
             <a href="wishlist.html">
@@ -1923,7 +1921,7 @@
                 </a>
                 <a href="q2_checkout.html">
                 <span class="shopButton">
-                    Buy Now
+                    View Details
                 </span>
                 </a>
             <a href="wishlist.html">
@@ -1964,7 +1962,7 @@
                 </a>
                 <a href="q2_checkout.html">
                 <span class="shopButton">
-                    Buy Now
+                    View Details
                 </span>
                 </a>
             <a href="wishlist.html">
@@ -2008,7 +2006,7 @@
                 </a>
                 <a href="q2_checkout.html">
                 <span class="shopButton">
-                    Buy Now
+                    View Details
                 </span>
                 </a>
             <a href="wishlist.html">
@@ -2052,7 +2050,7 @@
                 </a>
                 <a href="q2_checkout.html">
                 <span class="shopButton">
-                    Buy Now
+                    View Details
                 </span>
                 </a>
             <a href="wishlist.html">

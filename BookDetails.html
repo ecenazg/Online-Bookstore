@@ -4,12 +4,101 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Book Details - Born To Ice</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <style>
-        body {
-            font-family: Arial, sans-serif;
-            background-color: #F5F5F5;
-            color: #333;
+        * {
+            font-family: "Baskerville Old Face";
         }
+        div {
+            height: fit-content;
+            margin: 0;
+            padding: 2px;
+        }
+
+
+        span {
+            border: 2px solid #ffb0fe;
+            color: white;
+            font-size: 20px;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+
+        #searchComplex {
+            height: 70px;
+            border: 2px solid #ffb0fe;
+            background-color: #1b335f;
+            font-size: 0;
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+        }
+
+        select {
+            color: #1b335f;
+            background-color: white;;
+            font-size: 18px;
+            width: 200px;
+            margin-top: auto;
+            margin-bottom: auto;
+            text-align: left;
+            border: 9px solid #ffb0fe;
+            border-bottom: 11px solid #ffb0fe;
+        }
+
+        option {
+            color: #1b335f;
+            background-color: white;
+            font-size: 18px;
+            text-align: left;
+        }
+        #searchBar {
+            color: #1b335f;
+            background-color: white;
+            width: 400px;
+            font-size: 18px;
+            border: 7px solid #ffb0fe;
+            text-align: left;
+        }
+        #searchButton {
+            background-color: #ffb0fe;
+            width: 30px;
+            border: 7px solid #ffb0fe;
+        }
+
+        select:hover, span:hover {
+            cursor: pointer;
+        }
+
+        #searchButton:hover {
+            cursor: pointer;
+        }
+
+        h2 {
+            font-family: "Arial";
+            color: #f70776;
+            display: inline-block;
+        }
+        h3,h4,h5 {
+            font-family: "Arial";
+            margin: 0 0 0 0; /* This is done in order to remove space from above and below the headings */
+        }
+
+        h4 {
+            color: gray;
+        }
+        .book {
+            display: inline-flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-direction: column;
+            border: none;
+            margin: 7px;
+        }
+
         .container {
             width: 90%;
             margin: auto;
@@ -19,7 +108,6 @@
             flex-wrap: wrap;
             justify-content: space-between;
             align-items: start;
-            border: 1px solid #ccc;
             padding: 20px;
             margin: 20px 0;
             background: #fff;
@@ -33,7 +121,6 @@
             max-width: 100%;
             height: auto;
             display: block;
-            border: 1px solid #ccc;
         }
         .bookDetails {
             flex: 2 1 500px;
@@ -109,6 +196,38 @@
     </style>
 </head>
 <body>
+<div id="searchComplex">
+    <h1 style="font-size: 30px; color: white"><a href="index.html">Bookstore.com</a></h1>
+    <form style="display: inline-flex;">
+
+        <input id="searchBar" type="text" width="80px" placeholder="Search" autocomplete="off"/>
+        <button id="searchButton" type="submit" width="auto">
+            <img src="https://static.thenounproject.com/png/202232-200.png"
+                 height="22px" width="22px" style="margin-left: -12px; margin-bottom: -2px;"/>
+        </button>
+    </form>
+    <a href="q2_signin.html">
+            <span style="padding: 8px;">
+                Hello,
+                Sign In
+            </span>
+    </a>
+    <a href="q2_cart.html">
+            <span style="padding: 8px;">
+                <i class="fa fa-shopping-cart"></i>
+                Cart
+            </span>
+    </a>
+
+    <a href="wishlist.html">
+            <span style="padding: 8px;">
+                <i class="fa fa-heart"></i>
+                Wishlist
+            </span>
+    </a>
+
+  
+</div>
 <div class="container">
     <div class="bookInfo">
         <div class="bookImage">
