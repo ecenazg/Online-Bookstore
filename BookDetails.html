@@ -1,146 +1,158 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
+<meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Book Details - Born To Ice</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <style>
-        body {
-            font-family: Arial, sans-serif;
-            background-color: #F5F5F5;
-            color: #333;
+        * {
+            font-family: "Baskerville Old Face";
         }
+        div {
+            height: fit-content;
+            margin: 0;
+            padding: 2px;
+        }
+
+
+        span {
+            border: 2px solid #ffb0fe;
+            color: white;
+            font-size: 20px;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+
+        #searchComplex {
+            height: 70px;
+            border: 2px solid #ffb0fe;
+            background-color: #1b335f;
+            font-size: 0;
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+        }
+
+        select {
+            color: #1b335f;
+            background-color: white;;
+            font-size: 18px;
+            width: 200px;
+            margin-top: auto;
+            margin-bottom: auto;
+            text-align: left;
+            border: 9px solid #ffb0fe;
+            border-bottom: 11px solid #ffb0fe;
+        }
+
+        option {
+            color: #1b335f;
+            background-color: white;
+            font-size: 18px;
+            text-align: left;
+        }
+        #searchBar {
+            color: #1b335f;
+            background-color: white;
+            width: 400px;
+            font-size: 18px;
+            border: 7px solid #ffb0fe;
+            text-align: left;
+        }
+        #searchButton {
+            background-color: #ffb0fe;
+            width: 30px;
+            border: 7px solid #ffb0fe;
+        }
+
+        select:hover, span:hover {
+            cursor: pointer;
+        }
+
+        #searchButton:hover {
+            cursor: pointer;
+        }
+
+        h2 {
+            font-family: "Arial";
+            color: #f70776;
+            display: inline-block;
+        }
+        h3,h4,h5 {
+            font-family: "Arial";
+            margin: 0 0 0 0; /* This is done in order to remove space from above and below the headings */
+        }
+
+        h4 {
+            color: gray;
+        }
+        .book {
+            display: inline-flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-direction: column;
+            border: none;
+            margin: 7px;
+        }
+
         .container {
             width: 90%;
             margin: auto;
-        }
-        .bookInfo {
-            display: flex;
+Expand All
+	@@ -19,7 +108,6 @@
             flex-wrap: wrap;
             justify-content: space-between;
             align-items: start;
-            border: 1px solid #ccc;
             padding: 20px;
             margin: 20px 0;
             background: #fff;
-            box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.1);
-        }
-        .bookImage {
-            flex: 1 1 300px;
-            margin-right: 20px;
-        }
-        .bookImage img {
+Expand All
+	@@ -33,7 +121,6 @@
             max-width: 100%;
             height: auto;
             display: block;
-            border: 1px solid #ccc;
         }
         .bookDetails {
             flex: 2 1 500px;
-        }
-        .bookDetails h2, .bookDetails h3 {
-            margin: 0 0 10px 0;
-            padding: 0;
-            color: #333;
-        }
-        .bookDetails p {
-            margin-bottom: 10px;
-            color: #666;
-        }
-        .bookDetails .price {
-            color: red;
-            font-weight: bold;
-        }
-        .bookDetails .stock-status {
-            color: green;
-            margin-top: 20px;
-        }
-        .bookDetails .shopButton {
-            display: inline-block;
-            background: #FFAF1B;
-            color: #fff;
-            padding: 10px 20px;
-            text-decoration: none;
-            margin: 10px 0;
-            border-radius: 4px;
-            transition: background 0.3s;
-            float: right;
-        }
-        .bookDetails .shopButton:hover {
-            background: #E69719;
-        }
-
-        .reviews {
-            margin-top: 20px;
-            width: 90%;
-            margin-left: auto;
-            margin-right: auto;
-        }
-
-        .reviews h3 {
-            border-bottom: 1px solid #ccc;
-            padding-bottom: 10px;
-        }
-
-        .review {
-            border: 1px solid #ccc;
-            padding: 10px;
-            margin-bottom: 10px;
-            background: #fff;
-            box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.1);
-        }
-
-        .review p {
-            margin: 0;
-            font-family: Arial, Helvetica, sans-serif;
-            color: black;
-        }
-
-        .review p:first-child {
-            margin-bottom: 10px;
-            color: gold;
-            font-size: 1.2em;
-        }
-
-        .review p:last-child {
-            margin-top: 10px;
-            font-style: italic;
-            color: gray;}
+Expand Down
+Expand Up
+	@@ -109,6 +196,38 @@
     </style>
 </head>
 <body>
+<div id="searchComplex">
+    <h1 style="font-size: 30px; color: white"><a href="index.html">Bookstore.com</a></h1>
+    <form style="display: inline-flex;">
+
+        <input id="searchBar" type="text" width="80px" placeholder="Search" autocomplete="off"/>
+        <button id="searchButton" type="submit" width="auto">
+            <img src="https://static.thenounproject.com/png/202232-200.png"
+                 height="22px" width="22px" style="margin-left: -12px; margin-bottom: -2px;"/>
+        </button>
+    </form>
+    <a href="q2_signin.html">
+            <span style="padding: 8px;">
+                Hello,
+                Sign In
+            </span>
+    </a>
+    <a href="q2_cart.html">
+            <span style="padding: 8px;">
+                <i class="fa fa-shopping-cart"></i>
+                Cart
+            </span>
+    </a>
+
+    <a href="wishlist.html">
+            <span style="padding: 8px;">
+                <i class="fa fa-heart"></i>
+                Wishlist
+            </span>
+    </a>
+
+
+</div>
 <div class="container">
     <div class="bookInfo">
         <div class="bookImage">
-            <img src="https://images-na.ssl-images-amazon.com/images/I/517j00U23SL._SX415_BO1,204,203,200_.jpg" alt="Born To Ice by Paul Nicklen">
-        </div>
-        <div class="bookDetails">
-            <h2>Born To Ice</h2>
-            <h3>by Paul Nicklen</h3>
-            <p>&#11088 &#11088 &#11088 &#11088 &#11088</p>
-            <p>SeaLegacy co-founder, National Geographic photographer, acclaimed ocean conservationist, and TED Talks favorite, Paul Nicklen traces his extraordinary love affair with the polar regions in his most recent book, Born to Ice. His powerful images of iconic arctic and antarctic wildlife and scenery, coupled with his inspiring photographic storytelling, blends ethereal beauty of the icy landscape with a compelling call to action.</p>
-            <p class="price">₹ 811.19</p>
-            <p class="stock-status">In Stock.</p>
-
-             <!----------------------------------------------------->
-            <a href="" class="shopButton">Add to Cart</a>
-            <!------------------------------------------------------>
-
-        </div>
-        <div class="reviews">
-            <h3>Customer Reviews</h3>
-            <div class="review">
-                <p>&#11088 &#11088 &#11088 &#11088 &#11088</p>
-                <p>"Most beautiful book I have ever opened"</p>
-                <p>- Inga</p>
-            </div>
-            <div class="review">
-                <p>&#11088 &#11088 &#11088 &#11088 &#11088</p>
-                <p>" Absolutely amazing animal photography blown up so you can see every fly's wing and every water droplet. The second half was a bit penguin heavy for my liking, but highly recommend all the same."</p>
-                <p>- David</p>
-            </div>
-        </div>
-    </div>
-</div>
-</body>
-</html>
