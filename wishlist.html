@@ -7,40 +7,39 @@
 
     <style>
       /* CSS styles */
-
+      
       #wishlist-container {
         display: flex;
         flex-wrap: wrap;
         justify-content: center;
         align-items: center;
         margin-top: 20px;
+        padding: 20px;
+        background-color: #fff;
+        border-radius: 4px;
+        box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
       }
-
+      
       .wishlist-item {
         margin: 10px;
         width: 180px;
         text-align: center;
         position: relative;
+        background-color: #f2f2f2;
+        padding: 10px;
+        border-radius: 4px;
+        box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+        display: inline-block;
       }
-
+      
       .wishlist-item img {
         height: 200px;
         width: 150px;
+        border-radius: 4px;
       }
-
-      .wishlist-item:hover img {
-        transform: scale(1.05);
-      }
-
-      .wishlist-item:hover button {
-        background-color: #680747;
-      }
-
+      
       .wishlist-item button {
-        position: absolute;
-        bottom: 10px;
-        left: 50%;
-        transform: translateX(-50%);
+        margin-top: 10px;
         padding: 6px 12px;
         background-color: #680747;
         color: white;
@@ -50,6 +49,8 @@
         transition: background-color 0.3s ease-in-out;
       }
     </style>
+    
+
 
     <link rel="stylesheet" href="style.css" />
     <link
