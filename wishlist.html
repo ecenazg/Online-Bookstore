@@ -1,149 +1,229 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Wishlist - Bookstore</title>
+
     <style>
-        /* CSS styles */
-        h1 {
-            text-align: center;
-        }
+      /* CSS styles */
 
-        #wishlist {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
-        }
+      #wishlist-container {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+        margin-top: 20px;
+      }
 
-        .wishlist-item {
-            width: 200px;
-            margin: 10px;
-            padding: 10px;
-            border: 1px solid #ccc;
-            text-align: center;
-        }
+      .wishlist-item {
+        margin: 10px;
+        width: 180px;
+        text-align: center;
+        position: relative;
+      }
 
-        .wishlist-item img {
-            width: 160px;
-            height: 200px;
-        }
+      .wishlist-item img {
+        height: 200px;
+        width: 150px;
+      }
 
-        .wishlist-item h3,
-        .wishlist-item h4 {
-            margin: 5px 0;
-        }
+      .wishlist-item:hover img {
+        transform: scale(1.05);
+      }
 
-        .wishlist-item button {
-            margin-top: 10px;
-        }
+      .wishlist-item:hover button {
+        background-color: #680747;
+      }
 
-        .wishlistButton {
-            background-color: #4CAF50;
-            border: none;
-            color: white;
-            padding: 10px 20px;
-            text-align: center;
-            text-decoration: none;
-            display: inline-block;
-            font-size: 16px;
-            margin: 4px 2px;
-            cursor: pointer;
-        }
+      .wishlist-item button {
+        position: absolute;
+        bottom: 10px;
+        left: 50%;
+        transform: translateX(-50%);
+        padding: 6px 12px;
+        background-color: #680747;
+        color: white;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+        transition: background-color 0.3s ease-in-out;
+      }
     </style>
-</head>
-<body>
+
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+  </head>
+  <body>
+    <!--This is the main tab visible at the top of the page-->
+    <div id="searchComplex">
+      <h1 style="font-size: 30px; color: white">
+        <a href="index.html">Bookstore.com</a>
+      </h1>
+      <form style="display: inline-flex">
+        <select>
+          <option value="def" disabled selected>Books</option>
+          <option value="op0">All Categories</option>
+          <option value="op1">Arts & Photography</option>
+          <option value="op2">Biographies & Memoirs</option>
+          <option value="op3">Children's Books</option>
+          <option value="op4">Cookbooks, Food & Wine</option>
+          <option value="op5">Mystery, Thriller & Suspense&nbsp</option>
+          <option value="op6">Romance</option>
+          <option value="op7">Science Fiction & Fantasy</option>
+          <option value="op8">Teen & Young Adult</option>
+        </select>
+        <input
+          id="searchBar"
+          type="text"
+          width="80px"
+          placeholder="Search"
+          autocomplete="off"
+        />
+        <button id="searchButton" type="submit" width="auto">
+          <img
+            src="https://static.thenounproject.com/png/202232-200.png"
+            height="22px"
+            width="22px"
+            style="margin-left: -12px; margin-bottom: -2px"
+          />
+        </button>
+      </form>
+      <a href="q2_signin.html">
+        <span style="padding: 8px"> Hello, Sign In </span>
+      </a>
+      <a href="q2_cart.html">
+        <span style="padding: 8px">
+          <i class="fa fa-shopping-cart"></i>
+          Cart
+        </span>
+      </a>
+
+      <a href="wishlist.html">
+        <span style="padding: 8px">
+          <i class="fa fa-heart"></i>
+          Wishlist
+        </span>
+      </a>
+
+      <a href="author_view.html">
+        <span style="padding: 8px"> Author View </span>
+      </a>
+    </div>
+
     <h1>My Wishlist</h1>
     <div id="wishlist">
-        <!-- Wishlist items will be dynamically added here -->
+      <!-- Wishlist items will be dynamically added here -->
     </div>
 
     <script>
-        // Wishlist data
-        var wishlistItems = [];
+      // Wishlist data
+      var wishlistItems = [];
 
-        // Function to create a wishlist item object
-        function createWishlistItem(id, imageUrl, title, author, price) {
-            var item = {
-                id: id,
-                imageUrl: imageUrl,
-                title: title,
-                author: author,
-                price: price
-            };
-            return item;
+      // Function to create a wishlist item object
+      function createWishlistItem(id, imageUrl, title, author, price) {
+        var item = {
+          id: id,
+          imageUrl: imageUrl,
+          title: title,
+          author: author,
+          price: price,
+        };
+        return item;
+      }
+
+      // Add the books to the wishlist
+      var wishlistBooks = [
+        createWishlistItem(
+          "AP1",
+          "https://images-na.ssl-images-amazon.com/images/I/517j00U23SL._SX415_BO1,204,203,200_.jpg",
+          "Born To Ice",
+          "by Paul Nicklen",
+          "₹ 811.19"
+        ),
+        createWishlistItem(
+          "AP2",
+          "https://images-na.ssl-images-amazon.com/images/I/91-8mABL4rL.jpg",
+          "Contact High: A Visual History of Hip-Hop",
+          "by Vikki Tobak & Questlove",
+          "₹ 282.69"
+        ),
+        createWishlistItem(
+          "AP3",
+          "https://images-na.ssl-images-amazon.com/images/I/91D0j9uwOBL.jpg",
+          "Bibliophile: An Illustrated Miscellany",
+          "by Jane Mount",
+          "₹ 164.99"
+        ),
+      ];
+
+      // Retrieve wishlist items from local storage
+      var storedWishlistItems =
+        JSON.parse(localStorage.getItem("wishlist")) || [];
+
+      // Update wishlistItems array with stored data
+      wishlistItems = storedWishlistItems.concat(wishlistBooks);
+
+      // Function to create a wishlist item HTML
+      function createWishlistItemElement(item) {
+        var itemContainer = document.createElement("div");
+        itemContainer.className = "wishlist-item";
+
+        var imageElement = document.createElement("img");
+        imageElement.src = item.imageUrl;
+        imageElement.alt = item.title;
+        itemContainer.appendChild(imageElement);
+
+        var titleElement = document.createElement("h3");
+        titleElement.textContent = item.title;
+        itemContainer.appendChild(titleElement);
+
+        var authorElement = document.createElement("h4");
+        authorElement.textContent = item.author;
+        itemContainer.appendChild(authorElement);
+
+        var priceElement = document.createElement("p");
+        priceElement.style.color = "red";
+        priceElement.textContent = item.price;
+        itemContainer.appendChild(priceElement);
+
+        var removeButton = document.createElement("button");
+        removeButton.textContent = "Remove";
+        removeButton.addEventListener("click", function () {
+          removeItemFromWishlist(item.id);
+        });
+        itemContainer.appendChild(removeButton);
+
+        return itemContainer;
+      }
+
+      // Function to render wishlist items
+      function renderWishlistItems() {
+        var wishlistContainer = document.getElementById("wishlist");
+        wishlistContainer.innerHTML = "";
+
+        for (var i = 0; i < wishlistItems.length; i++) {
+          var wishlistItem = wishlistItems[i];
+          var wishlistItemElement = createWishlistItemElement(wishlistItem);
+          wishlistContainer.appendChild(wishlistItemElement);
         }
+      }
 
-        // Add the books to the wishlist
-        var wishlistBooks = [
-            createWishlistItem("AP1", "https://images-na.ssl-images-amazon.com/images/I/517j00U23SL._SX415_BO1,204,203,200_.jpg", "Born To Ice", "by Paul Nicklen", "₹ 811.19"),
-            createWishlistItem("AP2", "https://images-na.ssl-images-amazon.com/images/I/91-8mABL4rL.jpg", "Contact High: A Visual History of Hip-Hop", "by Vikki Tobak & Questlove", "₹ 282.69"),
-            createWishlistItem("AP3", "https://images-na.ssl-images-amazon.com/images/I/91D0j9uwOBL.jpg", "Bibliophile: An Illustrated Miscellany", "by Jane Mount", "₹ 164.99")
-        ];
+      // Function to remove an item from the wishlist
+      function removeItemFromWishlist(itemId) {
+        wishlistItems = wishlistItems.filter(function (item) {
+          return item.id !== itemId;
+        });
 
-        // Retrieve wishlist items from local storage
-        var storedWishlistItems = JSON.parse(localStorage.getItem('wishlist')) || [];
-
-        // Update wishlistItems array with stored data
-        wishlistItems = storedWishlistItems.concat(wishlistBooks);
-
-        // Function to create a wishlist item HTML
-        function createWishlistItemElement(item) {
-            var itemContainer = document.createElement("div");
-            itemContainer.className = "wishlist-item";
-
-            var imageElement = document.createElement("img");
-            imageElement.src = item.imageUrl;
-            imageElement.alt = item.title;
-            itemContainer.appendChild(imageElement);
-
-            var titleElement = document.createElement("h3");
-            titleElement.textContent = item.title;
-            itemContainer.appendChild(titleElement);
-
-            var authorElement = document.createElement("h4");
-            authorElement.textContent = item.author;
-            itemContainer.appendChild(authorElement);
-
-            var priceElement = document.createElement("p");
-            priceElement.style.color = "red";
-            priceElement.textContent = item.price;
-            itemContainer.appendChild(priceElement);
-
-            var removeButton = document.createElement("button");
-            removeButton.textContent = "Remove";
-            removeButton.addEventListener("click", function() {
-                removeItemFromWishlist(item.id);
-            });
-            itemContainer.appendChild(removeButton);
-
-            return itemContainer;
-        }
-
-        // Function to render wishlist items
-        function renderWishlistItems() {
-            var wishlistContainer = document.getElementById("wishlist");
-            wishlistContainer.innerHTML = "";
-
-            for (var i = 0; i < wishlistItems.length; i++) {
-                var wishlistItem = wishlistItems[i];
-                var wishlistItemElement = createWishlistItemElement(wishlistItem);
-                wishlistContainer.appendChild(wishlistItemElement);
-            }
-        }
-
-        // Function to remove an item from the wishlist
-        function removeItemFromWishlist(itemId) {
-            wishlistItems = wishlistItems.filter(function(item) {
-                return item.id !== itemId;
-            });
-
-            localStorage.setItem('wishlist', JSON.stringify(wishlistItems));
-            renderWishlistItems();
-        }
-
-        // Render the wishlist items on page load
+        localStorage.setItem("wishlist", JSON.stringify(wishlistItems));
         renderWishlistItems();
+      }
+
+      // Render the wishlist items on page load
+      renderWishlistItems();
     </script>
-</body>
+  </body>
 </html>

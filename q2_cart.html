@@ -6,11 +6,27 @@
     <title>Bookstore - Shopping Cart</title>
     <link rel="stylesheet" href="style.css"/>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <style>
+        /* Add this CSS code to modify the Buy Now button */
+        .shopButton {
+            background-color: #680747;
+            color: white;
+            padding: 8px 16px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+        
+        .shopButton:hover {
+            background-color: #8b0d65;
+        }
+    </style>
 </head>
 <body>
     <!--The main tab visible at the top of the page: -->
     <div id="searchComplex">
-        <h1 style="font-size: 30px; color: #680747;"><a href="index.html">Bookstore.com</a></h1>
+        <h1 style="font-size: 30px; color: white;"><a href="index.html">Bookstore.com</a></h1>
             <form style="display: inline-flex;">
                 <select>
                     <option value="def" disabled selected>Books</option>
