@@ -9,11 +9,11 @@ div {
 }
 
 div:hover {
-    background-color: #ff6bd6;
+    background-color: #ffb0fe;
 }
 
 div:hover h2 {
-    color: white;
+    color: #680747;
 }
 
 span {

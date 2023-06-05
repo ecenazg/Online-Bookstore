@@ -3,39 +3,44 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Author View - Bookstore</title>
+    <title>2019UCO1678 - Bookstore</title>
     <link rel="stylesheet" href="style.css"/>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
 </head>
 <body>
     <!--This is the main tab visible at the top of the page-->
     <div id="searchComplex">
         <h1 style="font-size: 30px; color: white"><a href="index.html">Bookstore.com</a></h1>
-        <div>
-            <a href="add_book.html">
-                <span>
-                    <i class="fa fa-plus"></i>
+            <form style="display: inline-flex;">
+                <select>
+                    <option value="def" disabled selected>Books</option>
+                    <option value="op0">All Categories</option>
+                    <option value="op1">Arts & Photography</option>
+                    <option value="op2">Biographies & Memoirs</option>
+                    <option value="op3">Children's Books</option>
+                    <option value="op4">Cookbooks, Food & Wine</option>
+                    <option value="op5">Mystery, Thriller & Suspense&nbsp</option>
+                    <option value="op6">Romance</option>
+                    <option value="op7">Science Fiction & Fantasy</option>
+                    <option value="op8">Teen & Young Adult</option>           
+                </select>
+                <input id="searchBar" type="text" width="80px" placeholder="Search" autocomplete="off"/>
+                <button id ="searchButton" type="submit" width="auto">
+                    <img src="https://static.thenounproject.com/png/202232-200.png" 
+                    height="22px" width="22px" style="margin-left: -12px; margin-bottom: -2px;"/>
+                </button>
+            </form>
+            <a href="q2_catalog.html">
+                <span style="padding: 8px;">
                     Add Book
                 </span>
             </a>
-            <a href="wishlist.html">
-                <span>
-                    <i class="fa fa-heart"></i>
-                    Wishlist
-                </span>
-            </a>
-            <a href="cart.html">
-                <span>
-                    <i class="fa fa-shopping-cart"></i>
-                    Cart
-                </span>
-            </a>
             <a href="index.html">
-                <span>
-                    Switch to Customer View
+                <span style="padding: 8px;">
+                    Customer View
                 </span>
             </a>
-        </div>
     </div>
     <!--Main Tab ends-->
 
