@@ -1,3 +1,6 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Book Details - Born To Ice</title>
@@ -99,25 +102,97 @@
         .container {
             width: 90%;
             margin: auto;
-Expand All
-	@@ -19,7 +108,6 @@
+        }
+        .bookInfo {
+            display: flex;
             flex-wrap: wrap;
             justify-content: space-between;
             align-items: start;
             padding: 20px;
             margin: 20px 0;
             background: #fff;
-Expand All
-	@@ -33,7 +121,6 @@
+            box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.1);
+        }
+        .bookImage {
+            flex: 1 1 300px;
+            margin-right: 20px;
+        }
+        .bookImage img {
             max-width: 100%;
             height: auto;
             display: block;
         }
         .bookDetails {
             flex: 2 1 500px;
-Expand Down
-Expand Up
-	@@ -109,6 +196,38 @@
+        }
+        .bookDetails h2, .bookDetails h3 {
+            margin: 0 0 10px 0;
+            padding: 0;
+            color: #333;
+        }
+        .bookDetails p {
+            margin-bottom: 10px;
+            color: #666;
+        }
+        .bookDetails .price {
+            color: red;
+            font-weight: bold;
+        }
+        .bookDetails .stock-status {
+            color: green;
+            margin-top: 20px;
+        }
+        .bookDetails .shopButton {
+            display: inline-block;
+            background: #FFAF1B;
+            color: #fff;
+            padding: 10px 20px;
+            text-decoration: none;
+            margin: 10px 0;
+            border-radius: 4px;
+            transition: background 0.3s;
+            float: right;
+        }
+        .bookDetails .shopButton:hover {
+            background: #E69719;
+        }
+
+        .reviews {
+            margin-top: 20px;
+            width: 90%;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .reviews h3 {
+            border-bottom: 1px solid #ccc;
+            padding-bottom: 10px;
+        }
+
+        .review {
+            border: 1px solid #ccc;
+            padding: 10px;
+            margin-bottom: 10px;
+            background: #fff;
+            box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.1);
+        }
+
+        .review p {
+            margin: 0;
+            font-family: Arial, Helvetica, sans-serif;
+            color: black;
+        }
+
+        .review p:first-child {
+            margin-bottom: 10px;
+            color: gold;
+            font-size: 1.2em;
+        }
+
+        .review p:last-child {
+            margin-top: 10px;
+            font-style: italic;
+            color: gray;}
     </style>
 </head>
 <body>
@@ -151,7 +226,7 @@ Expand Up
             </span>
     </a>
 
-
+  
 </div>
 <div class="container">
     <div class="bookInfo">
@@ -165,9 +240,11 @@ Expand Up
             <p>SeaLegacy co-founder, National Geographic photographer, acclaimed ocean conservationist, and TED Talks favorite, Paul Nicklen traces his extraordinary love affair with the polar regions in his most recent book, Born to Ice. His powerful images of iconic arctic and antarctic wildlife and scenery, coupled with his inspiring photographic storytelling, blends ethereal beauty of the icy landscape with a compelling call to action.</p>
             <p class="price">₹ 811.19</p>
             <p class="stock-status">In Stock.</p>
+
              <!----------------------------------------------------->
             <a href="" class="shopButton">Add to Cart</a>
             <!------------------------------------------------------>
+
         </div>
         <div class="reviews">
             <h3>Customer Reviews</h3>
