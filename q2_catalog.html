@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <link rel="stylesheet" href="style.css"/>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Bookstore - Catalog</title>
@@ -73,8 +74,47 @@
 </head>
 
 <body>
-    <h1>Bookstore</h1>
-    
+    <div id="searchComplex">
+        <h1 style="font-size: 30px; color: white"><a href="index.html">Bookstore.com</a></h1>
+            <form style="display: inline-flex;">
+                <select>
+                    <option value="def" disabled selected>Books</option>
+                    <option value="op0">All Categories</option>
+                    <option value="op1">Arts & Photography</option>
+                    <option value="op2">Biographies & Memoirs</option>
+                    <option value="op3">Children's Books</option>
+                    <option value="op4">Cookbooks, Food & Wine</option>
+                    <option value="op5">Mystery, Thriller & Suspense&nbsp</option>
+                    <option value="op6">Romance</option>
+                    <option value="op7">Science Fiction & Fantasy</option>
+                    <option value="op8">Teen & Young Adult</option>           
+                </select>
+                <input id="searchBar" type="text" width="80px" placeholder="Search" autocomplete="off"/>
+                <button id ="searchButton" type="submit" width="auto">
+                    <img src="https://static.thenounproject.com/png/202232-200.png" 
+                    height="22px" width="22px" style="margin-left: -12px; margin-bottom: -2px;"/>
+                </button>
+            </form>
+            <a href="q2_cart.html">
+                <span style="padding: 8px;">
+                    <i class="fa fa-shopping-cart"></i>
+                    Cart
+                </span>
+            </a>
+
+            <a href="wishlist.html">
+                <span style="padding: 8px;">
+                    <i class="fa fa-heart"></i>
+                    Wishlist
+                </span>
+            </a>
+
+            <a href="author_view.html">
+                <span style="padding: 8px;">
+                    Author View
+                </span>
+            </a>
+    </div>
     <div id="AP1" class="bookInfo">
         <img src="https://images-na.ssl-images-amazon.com/images/I/517j00U23SL._SX415_BO1,204,203,200_.jpg" height="300px" width="250px" alt="Born To Ice by Paul Nicklen"/>
         <span class="bookDet">
@@ -100,7 +140,7 @@
                     Add To Cart
                 </span>
                 </a>
-                <a href="q2_checkout.html">
+                <a href="BookDetails.html">
                 <span class="shopButton">
                     View Details
                 </span>
@@ -139,7 +179,7 @@
                     Add To Cart
                 </span>
                 </a>
-                <a href="q2_checkout.html">
+                <a href="BookDetails.html">
                 <span class="shopButton">
                     View Details
                 </span>
@@ -178,7 +218,7 @@
                     Add To Cart
                 </span>
                 </a>
-                <a href="q2_checkout.html">
+                <a href="BookDetails.html">
                 <span class="shopButton">
                     View Details
                 </span>
@@ -217,7 +257,7 @@
                     Add To Cart
                 </span>
                 </a>
-                <a href="q2_checkout.html">
+                <a href="BookDetails.html">
                 <span class="shopButton">
                     View Details
                 </span>
@@ -258,7 +298,7 @@
                     Add To Cart
                 </span>
                 </a>
-                <a href="q2_checkout.html">
+                <a href="BookDetails.html">
                 <span class="shopButton">
                     View Details
                 </span>
@@ -299,7 +339,7 @@
                     Add To Cart
                 </span>
                 </a>
-                <a href="q2_checkout.html">
+                <a href="BookDetails.html">
                 <span class="shopButton">
                     View Details
                 </span>
@@ -341,7 +381,7 @@
                     Add To Cart
                 </span>
                 </a>
-                <a href="q2_checkout.html">
+                <a href="BookDetails.html">
                 <span class="shopButton">
                     View Details
                 </span>
@@ -382,7 +422,7 @@
                     Add To Cart
                 </span>
                 </a>
-                <a href="q2_checkout.html">
+                <a href="BookDetails.html">
                 <span class="shopButton">
                     View Details
                 </span>
@@ -423,7 +463,7 @@
                     Add To Cart
                 </span>
                 </a>
-                <a href="q2_checkout.html">
+                <a href="BookDetails.html">
                 <span class="shopButton">
                     View Details
                 </span>
@@ -464,7 +504,7 @@
                     Add To Cart
                 </span>
                 </a>
-                <a href="q2_checkout.html">
+                <a href="BookDetails.html">
                 <span class="shopButton">
                     View Details
                 </span>
@@ -505,7 +545,7 @@
                     Add To Cart
                 </span>
                 </a>
-                <a href="q2_checkout.html">
+                <a href="BookDetails.html">
                 <span class="shopButton">
                     View Details
                 </span>
@@ -546,7 +586,7 @@
                     Add To Cart
                 </span>
                 </a>
-                <a href="q2_checkout.html">
+                <a href="BookDetails.html">
                 <span class="shopButton">
                     View Details
                 </span>
@@ -589,7 +629,7 @@
                     Add To Cart
                 </span>
                 </a>
-                <a href="q2_checkout.html">
+                <a href="BookDetails.html">
                 <span class="shopButton">
                     View Details
                 </span>
@@ -630,7 +670,7 @@
                     Add To Cart
                 </span>
                 </a>
-                <a href="q2_checkout.html">
+                <a href="BookDetails.html">
                 <span class="shopButton">
                     View Details
                 </span>
@@ -671,7 +711,7 @@
                     Add To Cart
                 </span>
                 </a>
-                <a href="q2_checkout.html">
+                <a href="BookDetails.html">
                 <span class="shopButton">
                     View Details
                 </span>
@@ -712,7 +752,7 @@
                     Add To Cart
                 </span>
                 </a>
-                <a href="q2_checkout.html">
+                <a href="BookDetails.html">
                 <span class="shopButton">
                     View Details
                 </span>
@@ -753,7 +793,7 @@
                     Add To Cart
                 </span>
                 </a>
-                <a href="q2_checkout.html">
+                <a href="BookDetails.html">
                 <span class="shopButton">
                     View Details
                 </span>
@@ -795,7 +835,7 @@
                     Add To Cart
                 </span>
                 </a>
-                <a href="q2_checkout.html">
+                <a href="BookDetails.html">
                 <span class="shopButton">
                     View Details
                 </span>
@@ -837,7 +877,7 @@
                     Add To Cart
                 </span>
                 </a>
-                <a href="q2_checkout.html">
+                <a href="BookDetails.html">
                 <span class="shopButton">
                     View Details
                 </span>
@@ -878,7 +918,7 @@
                     Add To Cart
                 </span>
                 </a>
-                <a href="q2_checkout.html">
+                <a href="BookDetails.html">
                 <span class="shopButton">
                     View Details
                 </span>
@@ -920,7 +960,7 @@
                     Add To Cart
                 </span>
                 </a>
-                <a href="q2_checkout.html">
+                <a href="BookDetails.html">
                 <span class="shopButton">
                     View Details
                 </span>
@@ -961,7 +1001,7 @@
                     Add To Cart
                 </span>
                 </a>
-                <a href="q2_checkout.html">
+                <a href="BookDetails.html">
                 <span class="shopButton">
                     View Details
                 </span>
@@ -1002,7 +1042,7 @@
                     Add To Cart
                 </span>
                 </a>
-                <a href="q2_checkout.html">
+                <a href="BookDetails.html">
                 <span class="shopButton">
                     View Details
                 </span>
@@ -1044,7 +1084,7 @@
                     Add To Cart
                 </span>
                 </a>
-                <a href="q2_checkout.html">
+                <a href="BookDetails.html">
                 <span class="shopButton">
                     View Details
                 </span>
@@ -1087,7 +1127,7 @@
                     Add To Cart
                 </span>
                 </a>
-                <a href="q2_checkout.html">
+                <a href="BookDetails.html">
                 <span class="shopButton">
                     View Details
                 </span>
@@ -1128,7 +1168,7 @@
                     Add To Cart
                 </span>
                 </a>
-                <a href="q2_checkout.html">
+                <a href="BookDetails.html">
                 <span class="shopButton">
                     View Details
                 </span>
@@ -1170,7 +1210,7 @@
                     Add To Cart
                 </span>
                 </a>
-                <a href="q2_checkout.html">
+                <a href="BookDetails.html">
                 <span class="shopButton">
                     View Details
                 </span>
@@ -1211,7 +1251,7 @@
                     Add To Cart
                 </span>
                 </a>
-                <a href="q2_checkout.html">
+                <a href="BookDetails.html">
                 <span class="shopButton">
                     View Details
                 </span>
@@ -1252,7 +1292,7 @@
                     Add To Cart
                 </span>
                 </a>
-                <a href="q2_checkout.html">
+                <a href="BookDetails.html">
                 <span class="shopButton">
                     View Details
                 </span>
@@ -1293,7 +1333,7 @@
                     Add To Cart
                 </span>
                 </a>
-                <a href="q2_checkout.html">
+                <a href="BookDetails.html">
                 <span class="shopButton">
                     View Details
                 </span>
@@ -1335,7 +1375,7 @@
                     Add To Cart
                 </span>
                 </a>
-                <a href="q2_checkout.html">
+                <a href="BookDetails.html">
                 <span class="shopButton">
                     View Details
                 </span>
@@ -1377,7 +1417,7 @@
                     Add To Cart
                 </span>
                 </a>
-                <a href="q2_checkout.html">
+                <a href="BookDetails.html">
                 <span class="shopButton">
                     View Details
                 </span>
@@ -1418,7 +1458,7 @@
                     Add To Cart
                 </span>
                 </a>
-                <a href="q2_checkout.html">
+                <a href="BookDetails.html">
                 <span class="shopButton">
                     View Details
                 </span>
@@ -1459,7 +1499,7 @@
                     Add To Cart
                 </span>
                 </a>
-                <a href="q2_checkout.html">
+                <a href="BookDetails.html">
                 <span class="shopButton">
                     View Details
                 </span>
@@ -1500,7 +1540,7 @@
                     Add To Cart
                 </span>
                 </a>
-                <a href="q2_checkout.html">
+                <a href="BookDetails.html">
                 <span class="shopButton">
                     View Details
                 </span>
@@ -1541,7 +1581,7 @@
                     Add To Cart
                 </span>
                 </a>
-                <a href="q2_checkout.html">
+                <a href="BookDetails.html">
                 <span class="shopButton">
                     View Details
                 </span>
@@ -1583,7 +1623,7 @@
                     Add To Cart
                 </span>
                 </a>
-                <a href="q2_checkout.html">
+                <a href="BookDetails.html">
                 <span class="shopButton">
                     View Details
                 </span>
@@ -1625,7 +1665,7 @@
                     Add To Cart
                 </span>
                 </a>
-                <a href="q2_checkout.html">
+                <a href="BookDetails.html">
                 <span class="shopButton">
                     View Details
                 </span>
@@ -1667,7 +1707,7 @@
                     Add To Cart
                 </span>
                 </a>
-                <a href="q2_checkout.html">
+                <a href="BookDetails.html">
                 <span class="shopButton">
                     View Details
                 </span>
@@ -1708,7 +1748,7 @@
                     Add To Cart
                 </span>
                 </a>
-                <a href="q2_checkout.html">
+                <a href="BookDetails.html">
                 <span class="shopButton">
                     View Details
                 </span>
@@ -1751,7 +1791,7 @@
                     Add To Cart
                 </span>
                 </a>
-                <a href="q2_checkout.html">
+                <a href="BookDetails.html">
                 <span class="shopButton">
                     View Details
                 </span>
@@ -1793,7 +1833,7 @@
                     Add To Cart
                 </span>
                 </a>
-                <a href="q2_checkout.html">
+                <a href="BookDetails.html">
                 <span class="shopButton">
                     View Details
                 </span>
@@ -1836,7 +1876,7 @@
                     Add To Cart
                 </span>
                 </a>
-                <a href="q2_checkout.html">
+                <a href="BookDetails.html">
                 <span class="shopButton">
                     View Details
                 </span>
@@ -1877,7 +1917,7 @@
                     Add To Cart
                 </span>
                 </a>
-                <a href="q2_checkout.html">
+                <a href="BookDetails.html">
                 <span class="shopButton">
                     View Details
                 </span>
@@ -1919,7 +1959,7 @@
                     Add To Cart
                 </span>
                 </a>
-                <a href="q2_checkout.html">
+                <a href="BookDetails.html">
                 <span class="shopButton">
                     View Details
                 </span>
@@ -1960,7 +2000,7 @@
                     Add To Cart
                 </span>
                 </a>
-                <a href="q2_checkout.html">
+                <a href="BookDetails.html">
                 <span class="shopButton">
                     View Details
                 </span>
@@ -2004,7 +2044,7 @@
                     Add To Cart
                 </span>
                 </a>
-                <a href="q2_checkout.html">
+                <a href="BookDetails.html">
                 <span class="shopButton">
                     View Details
                 </span>
@@ -2048,7 +2088,7 @@
                     Add To Cart
                 </span>
                 </a>
-                <a href="q2_checkout.html">
+                <a href="BookDetails.html">
                 <span class="shopButton">
                     View Details
                 </span>
